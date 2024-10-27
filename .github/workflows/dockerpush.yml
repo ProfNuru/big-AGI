@@ -51,6 +51,7 @@ jobs:
 
   update_docker_image_on_linode:
     name: Rebuild docker image on linode and run
+    needs: push_to_registry
     runs-on: ubuntu-latest
     steps:
       - name: executing remote ssh commands using password
